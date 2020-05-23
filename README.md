@@ -8,8 +8,8 @@ Clone the repo
 
 Just make the file setup.sh executable and run with sudo privillages
 
-'''
+```
 $ cd pop-setup
 $ chmod +x setup.sh
 $ sudo ./setup.sh
-'''
+```
