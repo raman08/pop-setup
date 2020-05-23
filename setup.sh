@@ -78,9 +78,35 @@ wget https://goo.gl/HFvzOt -O meow_1.0_all.deb
 sudo apt install ./meow_1.0_all.deb
 
 sleep 5
-echo "/n<<<<<<<  Meow install Sucessfully  >>>>>>>"
+echo "
+
+<<<<<<<  Meow install Sucessfully  >>>>>>>"
 
 clear
+
+# Install sublime text editor
+echo "
+
+Installing Sublime 3 "
+
+sleep 2
+
+sudo apt install  -y apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+sudo add-apt-repository "deb https://download.sublimetext.com/ apt/stable/"
+sudo apt update
+sudo apt install sublime-text
+
+
+echo "
+
+<<<<<<<  Sublime 3 install Sucessfully  >>>>>>>"
+
+sleep 2
+
+clear
+
+
 
 echo "Setup Complete........."
 
