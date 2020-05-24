@@ -66,7 +66,7 @@ clear
 echo "<<<<<<<< Setting Up python Environment >>>>>>>"
 sleep 3
 
-sudo apt-get install python2.7 python-pip python-dev git libssl-dev libffi-dev build-essential  python3-dev python3-distutils python3-setuptools
+sudo apt-get install python2.7 python-pip python-dev git libssl-dev libffi-dev build-essential  python3-dev python3-distutils python3-setuptools python3-venv
 /usr/bin/python3 -m pip install --upgrade pip
 pip3 install --upgrade git+https://github.com/arthaud/python3-pwntools.git
 
