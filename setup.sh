@@ -97,6 +97,21 @@ sudo add-apt-repository "deb https://download.sublimetext.com/ apt/stable/"
 sudo apt update
 sudo apt install sublime-text
 
+clear
+
+echo " Installing sublime merge... "
+
+sleep 2
+
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+sudo apt-get install apt-transport-https
+sudo apt-get update
+sudo apt-get install sublime-merge
+
+echo 'sublime-merge Sucessfully installed......'
+
+sleep 2
+
 
 echo "
 
@@ -109,8 +124,6 @@ clear
 
 
 echo "Setup Complete........."
-
-
-
-
-
+echo "
+	Please restart the pc
+	"
