@@ -19,14 +19,14 @@ sleep 2
 
 echo "Updating System.........."
 sleep 2
-sudo apt update && sudo apt upgrade -y 
+sudo apt update && sudo apt upgrade -y
 clear
 
 
 
 # install timeshift and gparted
 
-sudo apt install -y  timeshift gparted  
+sudo apt install -y  timeshift gparted
 clear
 
 
@@ -66,7 +66,7 @@ clear
 echo "<<<<<<<< Setting Up python Environment >>>>>>>"
 sleep 3
 
-sudo apt-get install python2.7 python-pip python-dev git libssl-dev libffi-dev build-essential  python3-dev python3-distutils python3-setuptools python3-venv
+sudo apt-get install python2.7 python-pip python-dev git libssl-dev libffi-dev build-essential  python3-dev python3-distutils python3-setuptools python3-venv python3-pip
 /usr/bin/python3 -m pip install --upgrade pip
 pip3 install --upgrade git+https://github.com/arthaud/python3-pwntools.git
 
@@ -77,28 +77,7 @@ echo "Done"
 sleep 2
 
 
-
-# Installing Meow
-
-echo "Installing Meow"
-
-sleep 2
-
-echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 642AC823
-sudo apt update
-sudo apt install -f openjdk-8-jdk git sbt
-
-wget https://goo.gl/HFvzOt -O meow_1.0_all.deb
-sudo apt install ./meow_1.0_all.deb
-
-sleep 5
-echo "
-
-<<<<<<<  Meow install Sucessfully  >>>>>>>"
-
 clear
-
 
 
 # Install sublime text editor
@@ -128,7 +107,7 @@ clear
 
 
 
-# Installing Mysql 
+# Installing Mysql
 
 echo "
 
@@ -144,6 +123,8 @@ clear
 
 sleep 2
 
+
+# Installing battery manager app
 
 
 # Setup Complete
