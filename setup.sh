@@ -80,6 +80,19 @@ clear
 # Installing vlc media player
 sudo apt install vlc
 
+# Installing wallpaper-reddit for dynamic wallpaper
+sudo apt-get install python3-dev python3-setuptools libjpeg8-dev zlib1g-dev libfreetype6-dev
+
+git clone https://github.com/ChrisTitusTech/wallpaper-reddit.git
+cd wallpaper-reddit
+sudo python3 setup.py install
+
+cd ..
+rm -rf wallpaper-reddit
+
+echo "<<<<<< Wallpaper Reddit Install Sucessfully >>>>>>>"
+
+
 # Installing Power Managing Tools
 sudo apt install tlp tlp-rdw
 sudo apt install powertop
