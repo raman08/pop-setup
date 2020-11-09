@@ -50,6 +50,10 @@ clear
 
 echo "Done"
 
+# Installing Python Kite Copilete
+bash -c "$(wget -q -O - https://linux.kite.com/dls/linux/current)"
+clear
+
 # Install sublime text editor
 echo "Installing Sublime 3 "
 sudo apt install  -y apt-transport-https ca-certificates curl software-properties-common
