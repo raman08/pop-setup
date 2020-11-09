@@ -27,7 +27,7 @@ clear
 
 # install important tools.....
 echo "Installing Some Important Tools....."
-sudo apt install tmux  python3-distutils python3-setuptools gnome-tweak-tool terminator
+sudo apt install tmux  python3-distutils python3-setuptools gnome-tweak-tool terminator xclip
 clear
 
 # Installing chrome browser and removing firefox browser
@@ -59,6 +59,17 @@ sudo apt update
 sudo apt install sublime-text
 echo "<<<<<<<  Sublime 3 install Sucessfully  >>>>>>>"
 clear
+
+# Installing Visual Sudio Code
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
+sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+
+rm packages.microsoft.gpg
+
+sudo apt-get install apt-transport-https
+sudo apt-get update
+sudo apt-get install code
 
 # Installing Mysql
 echo "Installing Mysql"
