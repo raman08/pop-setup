@@ -45,14 +45,10 @@ sleep 3
 
 sudo apt-get install  python3-pip git libssl-dev libffi-dev build-essential  python3-dev python3-distutils python3-setuptools python3-venv python3-pip
 /usr/bin/python3 -m pip install --upgrade pip
-pip3 install --upgrade git+https://github.com/arthaud/python3-pwntools.git
+#pip3 install --upgrade git+https://github.com/arthaud/python3-pwntools.git
 clear
 
 echo "Done"
-
-# Installing Python Kite Copilete
-bash -c "$(wget -q -O - https://linux.kite.com/dls/linux/current)"
-clear
 
 # Install sublime text editor
 echo "Installing Sublime 3 "
@@ -96,6 +92,7 @@ rm -rf wallpaper-reddit
 
 echo "<<<<<< Wallpaper Reddit Install Sucessfully >>>>>>>"
 
+clear
 
 # Installing Power Managing Tools
 sudo apt install tlp tlp-rdw
