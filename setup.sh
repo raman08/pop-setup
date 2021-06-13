@@ -18,7 +18,7 @@ sleep 2
 
 # update and upgrade installed packages.....
 echo "Updating System.........."
-sudo apt update && sudo apt upgrade -y
+sudo apt update && sudo apt upgrade -y > /dev/null
 clear
 
 # install timeshift and gparted
@@ -29,15 +29,16 @@ clear
 echo "Installing Some Important Tools....."
 sudo apt install tmux  python3-distutils python3-setuptools gnome-tweak-tool terminator xclip
 clear
+sudo apt install -y default-jre default-jdk
 
-# Installing chrome browser and removing firefox browser
-echo "Installing chrome browser"
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo apt install  -y ./google-chrome-stable_current_amd64.deb
-rm google-ch*
-echo "<<<<<<<< Chrome install Sucessfully >>>>>>>>"
-clear
-
+# Installing brave
+echo "Installing brave browser"
+sudo apt install apt-transport-https curl
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+sudo apt update
+sudo apt install brave-browser
+echo "<<<<<<<< Chrome install Sucessfully >>>>>"
 
 # Setting up python and installing required modules
 echo "<<<<<<<< Setting Up python Environment >>>>>>>"
@@ -79,6 +80,8 @@ clear
 
 # Installing vlc media player
 sudo apt install vlc
+sudo apt install -y libavcodec-extra libdvd-pkg; sudo dpkg-reconfigure libdvd-pkg
+sudo apt-get install ubuntu-restricted-extras
 
 # Installing wallpaper-reddit for dynamic wallpaper
 sudo apt-get install python3-dev python3-setuptools libjpeg8-dev zlib1g-dev libfreetype6-dev
@@ -95,8 +98,15 @@ echo "<<<<<< Wallpaper Reddit Install Sucessfully >>>>>>>"
 clear
 
 # Installing Power Managing Tools
-sudo apt install tlp tlp-rdw
-sudo apt install powertop
+git clone https://github.com/AdnanHodzic/auto-cpufreq.git
+cd auto-cpufreq && sudo ./auto-cpufreq-installer
+cd ..
+rm -rf auto-cpufreq
+sudo auto-cpufreq-install
+
+#Installing microsoft fonts
+sudo apt install -y ttf-mscorefonts-installer
+
 
 # Setup Complete
 
